@@ -4,12 +4,12 @@ This project is a travel companion web application built using HTML, CSS, and Ja
 
 **Features**
 
-•	User Authentication: Register and login system using LocalStorage
-•	Travel Wishlist: Add, update, and delete travel plans
-•	Trip Booking: Book trips with destination, dates, and number of travellers
-•	Weather Information: Get real-time weather updates for any city
-•	Interactive UI: Image sliders, animations, and responsive design
-•	Navigation System: Dropdown menus and dynamic UI updates
+•	User Authentication: Register and login system using LocalStorage.
+•	Travel Wishlist: Add, update, and delete travel plans.
+•	Trip Booking: Book trips with destination, dates, and number of travellers.
+•	Weather Information: Get real-time weather updates for any city.
+•	Interactive UI: Image sliders, animations, and responsive design.
+•	Navigation System: Dropdown menus and dynamic UI updates.
 
 **Prerequisites**
 
@@ -23,12 +23,12 @@ This project is a travel companion web application built using HTML, CSS, and Ja
 
 **Usage**
 
-•	Open the application in your browser
-•	Register a new account or login
-•	Add trips to your wishlist
-•	Book a trip
-•	Check weather for destinations
-•	Navigate through different pages using the menu
+•	Open the application in your browser.
+•	Register a new account or login.
+•	Add trips to your wishlist.
+•	Book a trip.
+•	Check weather for destinations.
+•	Navigate through different pages using the menu.
 
 **Tech Stack**
 
