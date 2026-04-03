@@ -1,4 +1,4 @@
-/* ===== RESET ===== */
+
 * {
   margin: 0;
   padding: 0;
@@ -12,25 +12,25 @@ body {
   color: #333;
 }
 
-/* ===== NAVBAR ===== */
+
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 25px 80px;   /* bigger */
+  padding: 25px 80px;   
   background: #000;
   color: #fff;
 }
 
 .navbar h2 {
-  font-size: 32px;      /* bigger logo */
+  font-size: 32px;     
 }
 
 .navbar a {
   color: #fff;
   margin-left: 35px;
   text-decoration: none;
-  font-size: 20px;      /* bigger links */
+  font-size: 20px;     
   transition: 0.3s;
 }
 
@@ -38,9 +38,9 @@ body {
   color: #00bcd4;
 }
 
-/* ===== HERO ===== */
+
 .hero {
-  height: 450px;   /* bigger */
+  height: 450px;   
   background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
               url("images/destinations.avif") center/cover no-repeat;
   display: flex;
@@ -51,7 +51,7 @@ body {
 }
 
 .hero h1 {
-  font-size: 60px;   /* BIG heading */
+  font-size: 60px;   
   margin-bottom: 15px;
 }
 
@@ -60,7 +60,6 @@ body {
   color: #ddd;
 }
 
-/* ===== ABOUT SECTION ===== */
 .about {
   display: flex;
   align-items: center;
@@ -74,13 +73,13 @@ body {
 }
 
 .about-text h2 {
-  font-size: 42px;  /* your size */
+  font-size: 42px; 
   margin-bottom: 20px;
   color: #111;
 }
 
 .about-text p {
-  font-size: 30px;  /* your size */
+  font-size: 30px;  
   line-height: 1.9;
   margin-bottom: 30px;
   color: #555;
@@ -96,7 +95,7 @@ body {
   box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
-/* ===== FEATURES ===== */
+
 .features {
   background: #f7f7f7;
   padding: 100px 60px;
@@ -118,7 +117,7 @@ body {
 .card {
   background: #fff;
   padding: 50px 40px;
-  width: 340px;   /* bigger */
+  width: 340px; 
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.15);
   transition: 0.3s;
@@ -138,7 +137,6 @@ body {
   line-height: 1.7;
 }
 
-/* ===== EXTERNAL LINKS ===== */
 .external-links {
   padding: 100px 60px;
   text-align: center;
@@ -159,7 +157,7 @@ body {
 .link-card {
   background: #fff;
   padding: 45px;
-  width: 320px;   /* bigger */
+  width: 320px;   
   border-radius: 20px;
   text-decoration: none;
   color: #333;
@@ -179,16 +177,16 @@ body {
   margin-top: 15px;
 }
 
-/* ===== FOOTER ===== */
+
 footer {
   background: #000;
   color: #fff;
   text-align: center;
-  padding: 30px;      /* bigger */
-  font-size: 20px;    /* bigger text */
+  padding: 30px;      
+  font-size: 20px;   
 }
 
-/* ===== RESPONSIVE ===== */
+
 @media (max-width: 768px) {
 
   .navbar {
