@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>YourWishlist</title>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="bootstrap.min.css">
+      <link rel="stylesheet" href="style.css">
+   </head>
+   <body>
+
+      <header class="container pt-4 pb-3">
+         <h1 class="fs-2 fw-bold">Your Wishlist</h1>
+      </header>
+      
+      <div class="line w-100 mt-2 mb-3"></div>
+
+      <section class="container">
+         <div class="bg-body py-5 text-center">
+            <h2 class="fs-3 fw-bold text-decoration-underline mb-5">Your Dream Journal</h2>
+
+            <input  id="country" type="text"  placeholder="Where do you want to go.." class="form-control mb-2 w-75 mx-auto">
+            <div id="alertName" class="alert alert-danger p-2 w-75 mx-auto d-none">Please enter a valid place name.</div>
+
+            <input  id="start_date" type="date"  placeholder="Start Date.." class="form-control mb-2 w-75 mx-auto">
+
+            <input  id="end_date" type="date"  placeholder="End Date.." class="form-control mb-2 w-75 mx-auto">
+
+            <textarea id="nop" type="number" placeholder="Number of person(s).." style="resize:none;" class="form-control mb-2 w-75 mx-auto"></textarea>
+
+            <div class="buttons w-75 mx-auto">
+               <div class="row g-0">
+                  <div class="col-6 text-start">
+                     <button class="btn btn-primary mt-3 p-2" id="updateBtn" style="display:none;">Update</button>
+                  </div>
+                  <div class="col-6 text-end">
+                     <button class="btn btn-primary mt-3 me-2 p-2" id="resetBtn">Reset Form</button>
+                     <button class="btn btn-primary mt-3 p-2" id="addBtn">Add</button>
+                  </div>
+               </div>
+            </div>
+
+            <div class="w-75 mx-auto">
+               <table class="table table-striped mt-4 text-center">
+                  <thead>
+                     <th>index</th>
+                     <th>Your Vacation</th>
+                     <th>Start Date</th>
+                     <th>End Date</th>
+                     <th>Number of Person(s)</th>
+                     <th>Update</th>
+                     <th>Delete</th>
+                  </thead>
+                  <tbody id="myTable">
+                     
+                  </tbody>
+               </table>
+            </div>
+         </div>
+      </section>
+      <script src="script.js"></script>
+   </body>
+</html>

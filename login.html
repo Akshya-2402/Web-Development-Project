@@ -1,0 +1,94 @@
+```html
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>login page</title>
+
+    <link rel="stylesheet" href="login.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Login</h1>
+      <form onsubmit="return handleLogin(event);">
+        <div class="textbox">
+          <input type="text" id="username" placeholder="Username" />
+          <i class="fa-solid fa-user"></i>
+        </div>
+
+        <div class="text">
+          <input type="password" id="password" placeholder="Password" />
+          <i class="fa-solid fa-lock"></i>
+        </div>
+
+        <div class="forgot">
+          <a href="#">Forgot Password?</a>
+          <input type="checkbox" id="remember" />
+          <label for="remember">Remember me?</label>
+        </div>
+
+        <div class="login">
+          <button type="submit">Login</button>
+        </div>
+      </form>
+
+      <div class="or">
+        <hr width="35%" size="2" />
+        <h3>OR</h3>
+        <hr width="35%" size="2" />
+      </div>
+
+      <div class="google">
+        <img src="images/google.jpg" />
+        <button>Sign up with Google</button>
+      </div>
+
+      <div class="register">
+        <l>Don't have an account?</l>
+        <a href="register.html">Register</a>
+      </div>
+    </div>
+
+    <script>
+      function handleLogin(event) {
+        event.preventDefault();
+
+        const usernameInput = document.getElementById("username").value.trim();
+        const passwordInput = document.getElementById("password").value.trim();
+
+        const storedData = JSON.parse(localStorage.getItem("userData"));
+        if (!storedData) {
+          alert("No account found! Please register first.");
+          window.location.href = "register.html";
+          return false;
+        }
+
+        if (
+          usernameInput === storedData.email &&
+          passwordInput === storedData.password
+        ) {
+          localStorage.setItem("isLoggedIn", "true");
+
+          alert("Login successful! Redirecting to booking...");
+
+          window.location.href = "homepage.html#booking-section";
+          return false;
+        } else {
+          alert("Wrong Email or Password!");
+          return false;
+        }
+      }
+    </script>
+  </body>
+</html>
+```

@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="register.css" />
+    <title>Registration Page</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="registration">
+      <div class="container">
+        <h1>Your travel journey starts today!</h1>
+      </div>
+      <div class="box">
+        <h1>Sign Up</h1>
+        <br />
+        <form onsubmit="return false;">
+          <div class="row">
+            <input type="text" id="name" placeholder="Name" />
+            <br />
+            <input type="text" id="number" placeholder="Mobile Number" /><br />
+            <input type="text" id="email" placeholder="Email" /><br />
+            <input type="password" id="password" placeholder="Password" /><br />
+            <input type="date" id="DOB" placeholder="Date of Birth" /><br />
+          </div>
+          <button id="register" type="submit" onclick="submitForm(event)">
+            Register
+          </button>
+          <p id="result" style="font-size: 15px"></p>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      function validate(number) {
+        const phnumber = /^[6-9][0-9]{9}$/;
+        return phnumber.test(number);
+      }
+
+      function checkAge() {
+        var DOB = document.getElementById("DOB").value;
+        if (!DOB) {
+          alert("Please enter your date of birth.");
+          return false;
+        }
+        var currentDate = new Date();
+        var birthDate = new Date(DOB);
+        var age = currentDate.getFullYear() - birthDate.getFullYear();
+        var month = currentDate.getMonth() - birthDate.getMonth();
+        if (
+          month < 0 ||
+          (month === 0 && currentDate.getDate() < birthDate.getDate())
+        ) {
+          age--;
+        }
+
+        if (age < 18) {
+          alert("You cannot register because you are not 18 years old.");
+          return false;
+        }
+        return true;
+      }
+
+      function submitForm(event) {
+        event.preventDefault();
+
+        const name = document.getElementById("name").value;
+        const phonenumber = document.getElementById("number").value;
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+
+        // 1. Validate Phone
+        if (!validate(phonenumber)) {
+          window.alert("Please enter a valid mobile number.");
+          return;
+        }
+
+        // 2. Validate Age
+        if (!checkAge()) {
+          return;
+        }
+
+        // 3. Save Data
+        const userInfo = {
+          email: email,
+          password: password,
+          name: name,
+        };
+
+        localStorage.setItem("userData", JSON.stringify(userInfo));
+
+        alert("Registration Successful!");
+        window.location.href = "login.html";
+      }
+    </script>
+  </body>
+</html>

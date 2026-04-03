@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Booking</title>
+    <link rel="stylesheet" href="booking.css" />
+  </head>
+  <header>
+    <h1>Book Your Trip ✈️</h1>
+  </header>
+  <body>
+    <div class="booking-container">
+      <div class="booking-card">
+        <h1>Book Your Trip ✈️</h1>
+
+        <form id="bookingForm">
+          <input type="text" placeholder="From" required />
+          <input type="text" placeholder="Destination" required />
+          <input type="date" required />
+          <input type="date" required />
+          <input type="number" placeholder="Number of Travelers" required />
+
+          <button type="submit">Confirm Booking</button>
+        </form>
+
+        <p id="booking-msg"></p>
+      </div>
+    </div>
+    <script>
+      // ❌ Block access if not logged in
+      const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+
+      if (!isLoggedIn) {
+        alert("Please login first!");
+        window.location.href = "login.html";
+      }
+
+      // ✅ Booking form handler
+      document
+        .getElementById("bookingForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          document.getElementById("booking-msg").innerText =
+            "✅ Booking Confirmed!";
+
+          this.reset();
+        });
+    </script>
+  </body>
+</html>

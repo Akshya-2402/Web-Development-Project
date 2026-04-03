@@ -1,0 +1,54 @@
+
+body{
+    background-color: #fff;
+}
+.bg-body{
+    background-color: #fff;
+}
+h1 , h3{
+    color: #0a0a0a;
+}
+.line{
+    height: 0.05rem;
+    background-color: #ccc;
+}
+@media screen and (min-width: 768px){
+    .table{
+        width: 100% !important;
+    }
+}
+.slide-search {
+    text-align: center;
+    padding: 40px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    margin: 20px auto;
+    width: 60%;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.pkg-card {
+  width: 220px;
+  padding: 15px;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.pkg-card button {
+  margin-top: 10px;
+  padding: 8px 15px;
+  border: none;
+  background: #2c3e50;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.pkg-card button:hover {
+  background: #27ae60;
+}

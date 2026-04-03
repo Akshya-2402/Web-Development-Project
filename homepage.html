@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel Companion</title>
+    <link rel="stylesheet" href="homepage.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">Menu</button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="#home">Home</a>
+          <a href="about.html">About</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+      <div class="row">
+        <a href="#">LuxeTravels</a>
+        <a href="about.html">About Us</a>
+        <a href="#contact">Contact</a>
+        <a href="weather.html"><img src="images/weathers.png" id="wimg" /></a>
+        <a href="index.html"><img src="images/wishlist.png" id="wishimg" /></a>
+
+        <div id="auth-ui" style="display: inline-block">
+          <button onclick="window.location.href = 'login.html'" id="login">
+            Login
+          </button>
+          <button onclick="window.location.href = 'register.html'" id="signup">
+            Sign up
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="hold">
+      <div class="slides slide1">
+        <h1>LuxeTravels</h1>
+        <h2>
+          Personalised<br />
+          Itenerary Planner
+        </h2>
+        <h3>Get where you need to be, confidently.</h3>
+      </div>
+      <div class="slides slide2">
+        <h1>Adventures Custom Made For You</h1>
+        <div class="suggests">
+          <div class="image">
+            <img src="images/destinations.avif" />
+            <div class="content">
+              <h1>Destinations</h1>
+              <h2>
+                We can arrange remarkable travel experiences on all seven
+                continents. Where do you want to go?
+              </h2>
+            </div>
+          </div>
+          <div class="image">
+            <img src="images/journeys.jpg" />
+            <div class="content">
+              <h1>Journeys</h1>
+              <h2>
+                Find your dream journey,whether you want to travel privately or
+                with a group, by train, boat or plane.
+              </h2>
+            </div>
+          </div>
+          <div class="image">
+            <img src="images/stays.jpeg" />
+            <div class="content">
+              <h1>Stays</h1>
+              <h2>
+                Our collection of inspiring places to stay, includes safari
+                lodges, super villas and botique riverboats.
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slides slide2b">
+        <div class="parallax">
+          <h1>
+            "We travel, not to escape life, but rather to not let life escape
+            us."
+          </h1>
+        </div>
+      </div>
+      <div class="slides slide3">
+        <h1>Our Popular Destinations</h1>
+        <section class="box">
+          <div class="slider-wrapper">
+            <div class="slider">
+              <img id="img1" src="images/safari.avif" />
+              <img id="img2" src="images/rich.jpg" />
+              <img id="img3" src="images/87.jpg" />
+              <img id="img4" src="images/rich.png" />
+            </div>
+            <div class="slider-nav">
+              <a href="#img1"></a>
+              <a href="#img2"></a>
+              <a href="#img3"></a>
+              <a href="#img4"></a>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="slide3b"></div>
+      <div class="slides slide4">
+        <h1>OUR SPONSERS</h1>
+        <div class="sponsers">
+          <div class="block"><img src="images/ethiad.png" /></div>
+          <div class="block"><img src="images/Cadbury-Logo.png" /></div>
+          <div class="block"><img src="images/ritz.jpg" /></div>
+        </div>
+      </div>
+      <div class="slides slide5">
+        <h1>LuxeTravels</h1>
+        <div class="components">
+          <div class="follow">
+            <h2>Follow Us</h2>
+            <br />
+            <img src="images/instagram.jpeg" />
+            <img src="images/LinkedIn.png" />
+            <img src="images/Facebook.png" />
+          </div>
+          <div class="list">
+            <h2>My Account</h2>
+            <br />
+            <a href="register.html">Register</a><br />
+            <a href="login.html">Login</a><br />
+            <a href="homepage.html">Home</a>
+          </div>
+          <div class="list">
+            <h2>About Us</h2>
+            <br />
+            <a href="#">Contact Details</a><br />
+            <a href="#">Cookie Policy</a><br />
+            <a href="#">Terms and Conditions</a><br />
+            <a href="#">SUpported Booking Sites</a>
+          </div>
+          <div class="list">
+            <h2>Products</h2>
+            <a href="homepage.html">LuxeTravels</a><br />
+            <a href="#">LuxePro</a><br />
+            <a href="#">Download App</a><br />
+            <a href="#">Help Centre</a>
+          </div>
+        </div>
+        <div class="contact-bottom" id="contact">
+    <h2>Contact Us 📞</h2>
+    <p>Email: luxetravels@gmail.com</p>
+    <p>Phone: +91 9876543210</p>
+    <p>Location: India</p>
+  </div>
+</div>
+      </div>
+    </div>
+
+    <script>
+      function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+      }
+
+      window.onclick = function (event) {
+        if (!event.target.matches(".dropbtn")) {
+          const dropdowns = document.getElementsByClassName("dropdown-content");
+          for (let i = 0; i < dropdowns.length; i++) {
+            dropdowns[i].classList.remove("show");
+          }
+        }
+      };
+
+      document.addEventListener("DOMContentLoaded", function () {
+  const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+
+  if (isLoggedIn) {
+    const authDiv = document.getElementById("auth-ui");
+    authDiv.innerHTML = `
+      <button onclick="window.location.href='booking.html'">Book Now</button>
+      <button onclick="logout()" style="background:red;">Logout</button>
+    `;
+  }
+});
+
+      function logout() {
+        localStorage.removeItem("isLoggedIn");
+        window.location.href = "homepage.html";
+      }
+    </script>
+  </body>
+</html>
