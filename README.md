@@ -62,4 +62,5 @@ This project is a travel companion web application built using HTML, CSS, and Ja
 **Author**
 
 Akshya R
+
 Reg No: 24BCE0428
