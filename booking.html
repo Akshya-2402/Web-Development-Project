@@ -27,7 +27,7 @@
       </div>
     </div>
     <script>
-      // ❌ Block access if not logged in
+      
       const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
 
       if (!isLoggedIn) {
@@ -35,7 +35,7 @@
         window.location.href = "login.html";
       }
 
-      // ✅ Booking form handler
+     
       document
         .getElementById("bookingForm")
         .addEventListener("submit", function (e) {
